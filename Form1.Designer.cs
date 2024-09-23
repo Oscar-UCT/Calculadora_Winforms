@@ -218,7 +218,7 @@
             this.multiplicar_btn.Name = "multiplicar_btn";
             this.multiplicar_btn.Size = new System.Drawing.Size(80, 80);
             this.multiplicar_btn.TabIndex = 13;
-            this.multiplicar_btn.Text = "*";
+            this.multiplicar_btn.Text = "x";
             this.multiplicar_btn.UseVisualStyleBackColor = true;
             this.multiplicar_btn.Click += new System.EventHandler(this.multiplicar_btn_Click);
             // 

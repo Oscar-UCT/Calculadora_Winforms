@@ -11,8 +11,8 @@ namespace Calculadora_ahorasi
             InitializeComponent();
         }
 
-        decimal numeroPrimario = 0;
-        decimal numeroSecundario = 0;
+        double numeroPrimario = 0;
+        double numeroSecundario = 0;
 
         // numeroPrimarioAlfaNum innecesario por que numeroPrimario se basa sobre lo ingresado en la casilla primaria
         string numeroSecundarioAlfaNum = "0";
@@ -96,25 +96,25 @@ namespace Calculadora_ahorasi
 
         private void division_btn_Click(object sender, EventArgs e)
         {
-            Operacion("/");
+            Operacion("÷");
         }
 
         private void multiplicar_btn_Click(object sender, EventArgs e)
         {
-            Operacion("*");
+            Operacion("x");
         }
         private void exponent_btn_Click(object sender, EventArgs e)
         {
-            Operacion("exp");
+            Operacion("^");
         }
 
         private void root_btn_Click(object sender, EventArgs e)
         {
-            Operacion("root");
+            Operacion("√");
         }
         private void percentage_btn_Click(object sender, EventArgs e)
         {
-            Operacion("percent");
+            Operacion("%");
         }
 
 
@@ -125,7 +125,7 @@ namespace Calculadora_ahorasi
             {
                 if (esperandoNumeroSecundario) // significaria que está en el último tramo del proceso -> valido para seguir
                 {
-                    numeroSecundario = decimal.Parse(numeroSecundarioAlfaNum);
+                    numeroSecundario = double.Parse(numeroSecundarioAlfaNum);
                     switch (operadorSeleccionado)
                     {
                         case "+":
@@ -144,10 +144,10 @@ namespace Calculadora_ahorasi
                             salidaPrimaria.Text = numeroPrimario.ToString();
                             break;
 
-                        case "/":
+                        case "÷":
                             if (numeroSecundario != 0)
                             {
-                                salidaSecundaria.Text = $"{numeroPrimario} / {numeroSecundario}";
+                                salidaSecundaria.Text = $"{numeroPrimario} ÷ {numeroSecundario}";
 
                                 numeroPrimario /= numeroSecundario;
 
@@ -159,14 +159,14 @@ namespace Calculadora_ahorasi
                             }
                             break;
 
-                        case "*":
-                            salidaSecundaria.Text = $"{numeroPrimario} * {numeroSecundario}";
+                        case "x":
+                            salidaSecundaria.Text = $"{numeroPrimario} x {numeroSecundario}";
 
                             numeroPrimario *= numeroSecundario;
 
                             salidaPrimaria.Text = numeroPrimario.ToString();
                             break;
-                        case "exp":
+                        case "^":
                             salidaSecundaria.Text = $"{numeroPrimario} ^ {numeroSecundario}";
                             if (numeroSecundario == 0)
                             {
@@ -174,7 +174,7 @@ namespace Calculadora_ahorasi
                             }
                             else
                             {
-                                decimal exponenciado = numeroPrimario;
+                                double exponenciado = numeroPrimario;
                                 for (int i = 0; i < numeroSecundario - 1; i++)
                                 {
                                     numeroPrimario *= exponenciado;
@@ -183,15 +183,14 @@ namespace Calculadora_ahorasi
 
                             salidaPrimaria.Text = numeroPrimario.ToString();
                             break;
-                        case "root":
-                            MessageBox.Show("No implementado");
-                            //salidaSecundaria.Text = $"{numeroPrimario} √ {numeroSecundario}";
+                        case "√":
+                            salidaSecundaria.Text = $"{numeroPrimario} √ {numeroSecundario}";
 
-                            //numeroPrimario *= numeroSecundario;
+                            numeroPrimario = Math.Pow(numeroPrimario, (1.0 / numeroSecundario));
 
-                            //salidaPrimaria.Text = numeroPrimario.ToString();
+                            salidaPrimaria.Text = numeroPrimario.ToString();
                             break;
-                        case "percent":
+                        case "%":
                             salidaSecundaria.Text = $"{numeroPrimario} % {numeroSecundario}";
 
                             numeroPrimario = numeroPrimario / 100 * numeroSecundario;
@@ -205,7 +204,7 @@ namespace Calculadora_ahorasi
             {
             }
         }
-
+       
         private void borrar_Click(object sender, EventArgs e)
         {
             salidaPrimaria.Text = "0";
@@ -231,9 +230,9 @@ namespace Calculadora_ahorasi
             {
                 if (salidaPrimaria.Text != "0")
                 {
-                    numeroPrimario = decimal.Parse(salidaPrimaria.Text);
+                    numeroPrimario = double.Parse(salidaPrimaria.Text);
 
-                    salidaSecundaria.Text = salidaPrimaria.Text;
+                    salidaSecundaria.Text = salidaPrimaria.Text + " " +  operador;
 
                     salidaPrimaria.Text = "0";
 
