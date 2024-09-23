@@ -283,7 +283,7 @@
             this.exponent_btn.Name = "exponent_btn";
             this.exponent_btn.Size = new System.Drawing.Size(80, 80);
             this.exponent_btn.TabIndex = 21;
-            this.exponent_btn.Text = "x^2";
+            this.exponent_btn.Text = "x^";
             this.exponent_btn.UseVisualStyleBackColor = true;
             this.exponent_btn.Click += new System.EventHandler(this.exponent_btn_Click);
             // 
