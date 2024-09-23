@@ -175,10 +175,12 @@ namespace Calculadora_ahorasi
                             else
                             {
                                 double exponenciado = numeroPrimario;
-                                for (int i = 0; i < numeroSecundario - 1; i++)
-                                {
-                                    numeroPrimario *= exponenciado;
-                                }
+                                numeroPrimario = Math.Pow(numeroPrimario, numeroSecundario);
+                                salidaPrimaria.Text = numeroPrimario.ToString();
+                                //for (int i = 0; i < numeroSecundario - 1; i++)
+                                //{
+                                //    numeroPrimario *= exponenciado;
+                                //}
                             }
 
                             salidaPrimaria.Text = numeroPrimario.ToString();
