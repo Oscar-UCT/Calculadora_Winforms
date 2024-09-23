@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Windows.Forms;
 
 namespace Calculadora_ahorasi
@@ -14,7 +15,7 @@ namespace Calculadora_ahorasi
         decimal numeroSecundario = 0;
 
         // numeroPrimarioAlfaNum innecesario por que numeroPrimario se basa sobre lo ingresado en la casilla primaria
-        string numeroSecundarioAlfaNum = "";
+        string numeroSecundarioAlfaNum = "0";
 
         string operadorSeleccionado = "";
 
@@ -77,7 +78,10 @@ namespace Calculadora_ahorasi
             AgregarNumero("9");
         }
 
-
+        private void point_btn_Click(object sender, EventArgs e)
+        {
+            AgregarNumero(",");
+        }
 
 
         private void suma_btn_Click(object sender, EventArgs e)
@@ -99,7 +103,19 @@ namespace Calculadora_ahorasi
         {
             Operacion("*");
         }
+        private void exponent_btn_Click(object sender, EventArgs e)
+        {
+            Operacion("exp");
+        }
 
+        private void root_btn_Click(object sender, EventArgs e)
+        {
+            Operacion("root");
+        }
+        private void percentage_btn_Click(object sender, EventArgs e)
+        {
+            Operacion("percent");
+        }
 
 
 
@@ -150,6 +166,38 @@ namespace Calculadora_ahorasi
 
                             salidaPrimaria.Text = numeroPrimario.ToString();
                             break;
+                        case "exp":
+                            salidaSecundaria.Text = $"{numeroPrimario} ^ {numeroSecundario}";
+                            if (numeroSecundario == 0)
+                            {
+                                numeroPrimario = 1;
+                            }
+                            else
+                            {
+                                decimal exponenciado = numeroPrimario;
+                                for (int i = 0; i < numeroSecundario - 1; i++)
+                                {
+                                    numeroPrimario *= exponenciado;
+                                }
+                            }
+
+                            salidaPrimaria.Text = numeroPrimario.ToString();
+                            break;
+                        case "root":
+                            MessageBox.Show("No implementado");
+                            //salidaSecundaria.Text = $"{numeroPrimario} √ {numeroSecundario}";
+
+                            //numeroPrimario *= numeroSecundario;
+
+                            //salidaPrimaria.Text = numeroPrimario.ToString();
+                            break;
+                        case "percent":
+                            salidaSecundaria.Text = $"{numeroPrimario} % {numeroSecundario}";
+
+                            numeroPrimario = numeroPrimario / 100 * numeroSecundario;
+
+                            salidaPrimaria.Text = numeroPrimario.ToString();
+                            break;
                     }
                 }
             }
@@ -168,7 +216,7 @@ namespace Calculadora_ahorasi
 
             esperandoNumeroSecundario = false;
 
-            numeroSecundarioAlfaNum = "";
+            numeroSecundarioAlfaNum = "0";
         }
 
         private void valorPrevio_TextChanged(object sender, EventArgs e)
@@ -210,13 +258,12 @@ namespace Calculadora_ahorasi
                     }
                     else
                     {
-                    numeroSecundarioAlfaNum += digito;
-
-                    salidaPrimaria.Text += digito;
+                        numeroSecundarioAlfaNum += digito;
+                        salidaPrimaria.Text += digito;
 
                     }
                 }
-                else if (salidaPrimaria.Text == "0")
+                else if (salidaPrimaria.Text == "0" && digito != ",")
                 {
                     salidaPrimaria.Text = digito;
                 }
@@ -229,5 +276,6 @@ namespace Calculadora_ahorasi
             {
             }
         }
+
     }
 }

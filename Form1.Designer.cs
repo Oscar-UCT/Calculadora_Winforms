@@ -47,13 +47,17 @@
             this.borrar = new System.Windows.Forms.Button();
             this.salidaPrimaria = new System.Windows.Forms.Label();
             this.salidaSecundaria = new System.Windows.Forms.Label();
+            this.point_btn = new System.Windows.Forms.Button();
+            this.exponent_btn = new System.Windows.Forms.Button();
+            this.root_btn = new System.Windows.Forms.Button();
+            this.percentage_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dos_btn
             // 
             this.dos_btn.AutoSize = true;
             this.dos_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dos_btn.Location = new System.Drawing.Point(107, 300);
+            this.dos_btn.Location = new System.Drawing.Point(107, 381);
             this.dos_btn.Name = "dos_btn";
             this.dos_btn.Size = new System.Drawing.Size(80, 80);
             this.dos_btn.TabIndex = 0;
@@ -66,7 +70,7 @@
             this.cero_btn.AutoSize = true;
             this.cero_btn.BackColor = System.Drawing.SystemColors.Control;
             this.cero_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cero_btn.Location = new System.Drawing.Point(107, 395);
+            this.cero_btn.Location = new System.Drawing.Point(107, 476);
             this.cero_btn.Name = "cero_btn";
             this.cero_btn.Size = new System.Drawing.Size(80, 80);
             this.cero_btn.TabIndex = 1;
@@ -78,7 +82,7 @@
             // 
             this.uno_btn.AutoSize = true;
             this.uno_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uno_btn.Location = new System.Drawing.Point(12, 300);
+            this.uno_btn.Location = new System.Drawing.Point(12, 381);
             this.uno_btn.Name = "uno_btn";
             this.uno_btn.Size = new System.Drawing.Size(80, 80);
             this.uno_btn.TabIndex = 2;
@@ -90,7 +94,7 @@
             // 
             this.tres_btn.AutoSize = true;
             this.tres_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tres_btn.Location = new System.Drawing.Point(204, 300);
+            this.tres_btn.Location = new System.Drawing.Point(204, 381);
             this.tres_btn.Name = "tres_btn";
             this.tres_btn.Size = new System.Drawing.Size(80, 80);
             this.tres_btn.TabIndex = 3;
@@ -102,7 +106,7 @@
             // 
             this.cuatro_btn.AutoSize = true;
             this.cuatro_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuatro_btn.Location = new System.Drawing.Point(12, 214);
+            this.cuatro_btn.Location = new System.Drawing.Point(12, 295);
             this.cuatro_btn.Name = "cuatro_btn";
             this.cuatro_btn.Size = new System.Drawing.Size(80, 80);
             this.cuatro_btn.TabIndex = 4;
@@ -114,7 +118,7 @@
             // 
             this.cinco_btn.AutoSize = true;
             this.cinco_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cinco_btn.Location = new System.Drawing.Point(107, 214);
+            this.cinco_btn.Location = new System.Drawing.Point(107, 295);
             this.cinco_btn.Name = "cinco_btn";
             this.cinco_btn.Size = new System.Drawing.Size(80, 80);
             this.cinco_btn.TabIndex = 5;
@@ -126,7 +130,7 @@
             // 
             this.seis_btn.AutoSize = true;
             this.seis_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seis_btn.Location = new System.Drawing.Point(204, 214);
+            this.seis_btn.Location = new System.Drawing.Point(204, 295);
             this.seis_btn.Name = "seis_btn";
             this.seis_btn.Size = new System.Drawing.Size(80, 80);
             this.seis_btn.TabIndex = 6;
@@ -138,7 +142,7 @@
             // 
             this.siete_btn.AutoSize = true;
             this.siete_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siete_btn.Location = new System.Drawing.Point(12, 128);
+            this.siete_btn.Location = new System.Drawing.Point(12, 209);
             this.siete_btn.Name = "siete_btn";
             this.siete_btn.Size = new System.Drawing.Size(80, 80);
             this.siete_btn.TabIndex = 7;
@@ -150,7 +154,7 @@
             // 
             this.ocho_btn.AutoSize = true;
             this.ocho_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ocho_btn.Location = new System.Drawing.Point(107, 128);
+            this.ocho_btn.Location = new System.Drawing.Point(107, 209);
             this.ocho_btn.Name = "ocho_btn";
             this.ocho_btn.Size = new System.Drawing.Size(80, 80);
             this.ocho_btn.TabIndex = 8;
@@ -162,7 +166,7 @@
             // 
             this.nueve_btn.AutoSize = true;
             this.nueve_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nueve_btn.Location = new System.Drawing.Point(204, 128);
+            this.nueve_btn.Location = new System.Drawing.Point(204, 209);
             this.nueve_btn.Name = "nueve_btn";
             this.nueve_btn.Size = new System.Drawing.Size(80, 80);
             this.nueve_btn.TabIndex = 9;
@@ -174,7 +178,7 @@
             // 
             this.suma_btn.AutoSize = true;
             this.suma_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suma_btn.Location = new System.Drawing.Point(312, 395);
+            this.suma_btn.Location = new System.Drawing.Point(312, 382);
             this.suma_btn.Name = "suma_btn";
             this.suma_btn.Size = new System.Drawing.Size(80, 80);
             this.suma_btn.TabIndex = 10;
@@ -186,7 +190,7 @@
             // 
             this.resta_btn.AutoSize = true;
             this.resta_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resta_btn.Location = new System.Drawing.Point(312, 300);
+            this.resta_btn.Location = new System.Drawing.Point(312, 287);
             this.resta_btn.Name = "resta_btn";
             this.resta_btn.Size = new System.Drawing.Size(80, 80);
             this.resta_btn.TabIndex = 11;
@@ -198,11 +202,11 @@
             // 
             this.division_btn.AutoSize = true;
             this.division_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.division_btn.Location = new System.Drawing.Point(312, 214);
+            this.division_btn.Location = new System.Drawing.Point(312, 201);
             this.division_btn.Name = "division_btn";
             this.division_btn.Size = new System.Drawing.Size(80, 80);
             this.division_btn.TabIndex = 12;
-            this.division_btn.Text = "/";
+            this.division_btn.Text = "÷";
             this.division_btn.UseVisualStyleBackColor = true;
             this.division_btn.Click += new System.EventHandler(this.division_btn_Click);
             // 
@@ -210,7 +214,7 @@
             // 
             this.multiplicar_btn.AutoSize = true;
             this.multiplicar_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiplicar_btn.Location = new System.Drawing.Point(312, 128);
+            this.multiplicar_btn.Location = new System.Drawing.Point(312, 115);
             this.multiplicar_btn.Name = "multiplicar_btn";
             this.multiplicar_btn.Size = new System.Drawing.Size(80, 80);
             this.multiplicar_btn.TabIndex = 13;
@@ -222,7 +226,7 @@
             // 
             this.resultado_btn.AutoSize = true;
             this.resultado_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultado_btn.Location = new System.Drawing.Point(204, 395);
+            this.resultado_btn.Location = new System.Drawing.Point(312, 476);
             this.resultado_btn.Name = "resultado_btn";
             this.resultado_btn.Size = new System.Drawing.Size(80, 80);
             this.resultado_btn.TabIndex = 14;
@@ -234,7 +238,7 @@
             // 
             this.borrar.AutoSize = true;
             this.borrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.borrar.Location = new System.Drawing.Point(12, 395);
+            this.borrar.Location = new System.Drawing.Point(12, 476);
             this.borrar.Name = "borrar";
             this.borrar.Size = new System.Drawing.Size(80, 80);
             this.borrar.TabIndex = 17;
@@ -261,13 +265,60 @@
             this.salidaSecundaria.Size = new System.Drawing.Size(0, 31);
             this.salidaSecundaria.TabIndex = 19;
             // 
+            // point_btn
+            // 
+            this.point_btn.Font = new System.Drawing.Font("Segoe UI", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.point_btn.Location = new System.Drawing.Point(204, 476);
+            this.point_btn.Name = "point_btn";
+            this.point_btn.Size = new System.Drawing.Size(80, 80);
+            this.point_btn.TabIndex = 20;
+            this.point_btn.Text = ",";
+            this.point_btn.UseVisualStyleBackColor = true;
+            this.point_btn.Click += new System.EventHandler(this.point_btn_Click);
+            // 
+            // exponent_btn
+            // 
+            this.exponent_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exponent_btn.Location = new System.Drawing.Point(204, 115);
+            this.exponent_btn.Name = "exponent_btn";
+            this.exponent_btn.Size = new System.Drawing.Size(80, 80);
+            this.exponent_btn.TabIndex = 21;
+            this.exponent_btn.Text = "x^2";
+            this.exponent_btn.UseVisualStyleBackColor = true;
+            this.exponent_btn.Click += new System.EventHandler(this.exponent_btn_Click);
+            // 
+            // root_btn
+            // 
+            this.root_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.root_btn.Location = new System.Drawing.Point(107, 115);
+            this.root_btn.Name = "root_btn";
+            this.root_btn.Size = new System.Drawing.Size(80, 80);
+            this.root_btn.TabIndex = 22;
+            this.root_btn.Text = "√";
+            this.root_btn.UseVisualStyleBackColor = true;
+            this.root_btn.Click += new System.EventHandler(this.root_btn_Click);
+            // 
+            // percentage_btn
+            // 
+            this.percentage_btn.Location = new System.Drawing.Point(12, 115);
+            this.percentage_btn.Name = "percentage_btn";
+            this.percentage_btn.Size = new System.Drawing.Size(80, 80);
+            this.percentage_btn.TabIndex = 23;
+            this.percentage_btn.Text = "%";
+            this.percentage_btn.UseVisualStyleBackColor = true;
+            this.percentage_btn.Click += new System.EventHandler(this.percentage_btn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(404, 498);
+            this.ClientSize = new System.Drawing.Size(404, 573);
+            this.Controls.Add(this.percentage_btn);
+            this.Controls.Add(this.root_btn);
+            this.Controls.Add(this.exponent_btn);
+            this.Controls.Add(this.point_btn);
             this.Controls.Add(this.salidaSecundaria);
             this.Controls.Add(this.salidaPrimaria);
             this.Controls.Add(this.borrar);
@@ -315,6 +366,10 @@
         private System.Windows.Forms.Button borrar;
         private System.Windows.Forms.Label salidaPrimaria;
         private System.Windows.Forms.Label salidaSecundaria;
+        private System.Windows.Forms.Button point_btn;
+        private System.Windows.Forms.Button exponent_btn;
+        private System.Windows.Forms.Button root_btn;
+        private System.Windows.Forms.Button percentage_btn;
     }
 }
 
